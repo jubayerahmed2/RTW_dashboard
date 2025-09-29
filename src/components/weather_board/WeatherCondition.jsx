@@ -4,12 +4,18 @@ import { WeatherContext } from "../../contexts";
 function WeatherCondition() {
   const { weatherData } = useContext(WeatherContext);
 
-  const { minTemperature, maxTemperature, humidity, cloudPercentage, wind } =
-    weatherData;
+  const {
+    minTemperature,
+    maxTemperature,
+    humidity,
+    cloudPercentage,
+    wind,
+    climate,
+  } = weatherData;
   return (
     <div>
       <p className="text-sm lg:text-lg font-bold uppercase mb-8">
-        thunderstorm with light drizzle
+        The Climate is <span className="text-green-500">{climate}</span>
       </p>
       <ul className="space-y-6 lg:space-y-6">
         <li className="text-sm lg:text-lg flex items-center justify-between space-x-4">
